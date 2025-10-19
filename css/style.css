@@ -309,8 +309,10 @@ section {
   align-items: center;
   margin-bottom: 8px;
 
-  border: 1px solid lightslategray;
   border-radius: 4px;
+
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
 }
 
 .description-icon {
