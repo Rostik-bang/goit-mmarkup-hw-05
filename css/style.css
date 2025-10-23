@@ -191,7 +191,7 @@ section {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('/images/people.jpg');
+    url('../images/people.jpg');
 
   max-width: 1440px;
   padding: 0 auto;
@@ -376,7 +376,7 @@ section {
   background-color: #ffffff;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  background: var(--white);
+  background-color: #ffffff;
 }
 
 .workers-job {
@@ -402,10 +402,9 @@ section {
   justify-content: center;
   align-items: center;
 
-  padding-top: 8px;
-  padding-right: 16px;
-  /* padding-bottom: 32px; */
-  padding-left: 16px;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-left: 16px;
 }
 
 .social-item {
