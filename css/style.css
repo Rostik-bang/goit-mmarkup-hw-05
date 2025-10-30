@@ -14,6 +14,12 @@ body:has(.backdrop.is-open) {
   overflow: hidden;
 }
 
+:root {
+  --iris: #404bbf; /* синій */
+  --cloud: #f4f4fd; /* світлий */
+  --ocean: #4d5ae5; /* темно-синій */
+}
+
 h1,
 h2,
 h3,
@@ -982,9 +988,8 @@ section {
 .input-argeement[type='checkbox']:checked
   + .agreement-wrapper
   > .agreement-checkbox {
-  background-color: #404bbf;
-
-  fill: #f4f4fd;
+  background-color: var(--iris);
+  fill: var(--cloud);
   border: none;
 }
 
