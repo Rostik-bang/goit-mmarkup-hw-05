@@ -772,8 +772,8 @@ section {
   visibility: hidden;
   pointer-events: none;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -801,8 +801,6 @@ section {
   border-radius: 4px;
 
   background-color: #fcfcfc;
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -884,9 +882,12 @@ section {
   display: block;
   width: 100%;
   height: 40px;
-  padding: 11px 34px;
 
-  border: 1px solid #2e2f42;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -916,10 +917,15 @@ section {
   fill: #4d5ae5;
 }
 
+.comment-wrapper {
+  margin-bottom: 16px;
+}
+
 .modal-user-comment {
   resize: none;
 
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  color: rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
   font-size: 12px;
@@ -927,6 +933,9 @@ section {
   /* line-height: 14px; */
   line-height: 1.17;
   letter-spacing: 0.04em;
+
+  background-color: transparent;
+  outline: transparent;
 
   width: 100%;
   height: 120px;
@@ -948,6 +957,15 @@ section {
 .form-agreement {
   margin-bottom: 24px;
 }
+.accent-wrapper {
+  font-weight: 400;
+  font-size: 12px;
+
+  /* line-height: 14px; */
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
 .agreement-checkbox {
   display: inline-flex;
   justify-content: center;
@@ -956,9 +974,6 @@ section {
   height: 16px;
 
   color: transparent;
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
 
@@ -981,16 +996,6 @@ input[type='checkbox']:checked + .agreement-wrapper > .agreement-checkbox {
 
 .agreement-checkbox-icon {
   fill: currentColor;
-}
-
-.accent-wrapper {
-  font-weight: 400;
-  font-size: 12px;
-
-  /* line-height: 14px; */
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
 }
 
 .accent-text {
