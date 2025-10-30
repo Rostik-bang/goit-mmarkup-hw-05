@@ -721,8 +721,10 @@ section {
 .footer-button {
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
+
+  cursor: pointer;
 
   font-weight: 500;
   font-size: 16px;
@@ -744,7 +746,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+}
+
+.modal-footer-icon {
+  margin-left: 16px;
 }
 
 .footer-button:hover,
@@ -767,8 +772,8 @@ section {
   visibility: hidden;
   pointer-events: none;
 
-  transition: 150ms ease-in-out;
-  transition-property: opacity, visibility;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -797,8 +802,10 @@ section {
 
   background-color: #fcfcfc;
 
-  transition: 150ms ease-in-out;
-  transition-property: opacity, transform;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .modal-button {
@@ -809,10 +816,13 @@ section {
   width: 24px;
   height: 24px;
   border: none;
-  border-radius: 100%;
+  border-radius: 50%;
   stroke-width: 1px;
   color: #2e2f42;
   padding: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 
   background-color: #e7e9fc;
 
@@ -820,12 +830,13 @@ section {
   justify-content: center;
   align-items: center;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button-icon {
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button:hover,
