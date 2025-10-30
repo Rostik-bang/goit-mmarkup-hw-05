@@ -804,6 +804,8 @@ section {
 
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button {
@@ -957,15 +959,7 @@ section {
 .form-agreement {
   margin-bottom: 24px;
 }
-.accent-wrapper {
-  font-weight: 400;
-  font-size: 12px;
 
-  /* line-height: 14px; */
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-}
 .agreement-checkbox {
   display: inline-flex;
   justify-content: center;
@@ -978,8 +972,6 @@ section {
   border: 1px solid rgba(46, 47, 66, 0.4);
 
   outline: transparent;
-  /* border: none; */
-
   fill: transparent;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -989,13 +981,9 @@ section {
 
 input[type='checkbox']:checked + .agreement-wrapper > .agreement-checkbox {
   background-color: #404bbf;
-  /* border-color: #404bbf; */
-  fill: #ffffff;
-  border: none;
-}
 
-.agreement-checkbox-icon {
-  fill: currentColor;
+  fill: #f4f4fd;
+  border: none;
 }
 
 .accent-text {
@@ -1003,4 +991,11 @@ input[type='checkbox']:checked + .agreement-wrapper > .agreement-checkbox {
   line-height: 1.33;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+}
+
+.agreement-wrapper {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
