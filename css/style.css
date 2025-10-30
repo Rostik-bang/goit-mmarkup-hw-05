@@ -968,8 +968,8 @@ section {
   height: 16px;
 
   color: transparent;
-  border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
 
   outline: transparent;
   fill: transparent;
