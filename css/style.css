@@ -843,6 +843,7 @@ section {
 .modal-button:focus {
   color: #ffffff;
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-caption {
@@ -956,7 +957,7 @@ section {
 
   color: transparent;
   border-radius: 2px;
-  border: 1px solid rgb(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
 
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -964,15 +965,18 @@ section {
   outline: transparent;
   /* border: none; */
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 
-  transition-property: border-color, background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 input[type='checkbox']:checked + .agreement-wrapper > .agreement-checkbox {
   background-color: #404bbf;
-  border-color: #404bbf;
-  color: #ffffff;
+  /* border-color: #404bbf; */
+  fill: #ffffff;
+  border: none;
 }
 
 .agreement-checkbox-icon {
