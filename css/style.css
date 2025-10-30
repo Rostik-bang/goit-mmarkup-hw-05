@@ -680,11 +680,17 @@ section {
   margin-bottom: 16px;
 }
 
-.footer-form-wrapper {
+.label-footer {
   display: flex;
   align-items: center;
   gap: 19px;
 }
+
+/* .footer-form-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+} */
 
 .footer-form-input {
   border: 1px solid #ffffff;
